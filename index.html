@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <button><i class="fa-solid fa-floppy-disk" id="save"></i>SALVAR</button>
+        <div class="container">
+            <h1>Relatório Climatico</h1>
+
+            <div class="form">
+                <div class="indice">
+                    <p>Estado:</p>
+                    <p>cidade:</p>
+                    <p>Período da Coleta:</p>
+                </div>
+
+                <div class="selects">
+                    <select name="estado" id="estado">
+                        <option value="#">selecione um estado</option>
+                    </select>
+                    <select name="cidade" id="cidade"></select>
+                    <input type="text" disabled>
+                </div>
+            </div>
+
+            <div class="info">
+                <h4>Qualidade do Ar</h4>
+
+                <p id="qualidadeAr">---</p>
+
+                <p class="dados"><i>co:</i> --</p>
+                <p class="dados"><i>no2:</i> --</p>
+                <p class="dados"><i>o3:</i> --</p>
+                <p class="dados"><i>pm2.5:</i> --</p>
+                <p class="dados"><i>pm10:</i> --</p>
+                <p class="dados"><i>so2:</i> --</p>
+            </div>
+            <div id="erro" class="hyde"> <i class="fa-solid fa-xmark" id="xErro"></i><span id="msgErro"></span></div>
+        </div>
+
+        <section class="table hyde">
+            <hr>
+            <p>No dia <strong id="dt-hr">'data autal' às 'hora atual'</strong> foram coletados os seguintes dados climaticos de <strong id="cidadeTable">'nome da cidade</strong> <strong id="estadoTable">- estado'</strong> presentes no quadro abaixo</p>
+
+            <hr>
+            <table>
+                
+            </table>
+        </section>
+    </main>
+
+
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
