@@ -65,7 +65,7 @@ export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
     const qAr = document.querySelector('#qualidadeAr');
 
     if (gbDefraIndex >= 1 && gbDefraIndex <= 3) {
-        qAr.innerHTML = 'Baixa'
+        qAr.innerHTML = 'Boa'
         qAr.style.backgroundColor = 'green';
     } else if (gbDefraIndex > 3 && gbDefraIndex <= 6) {
         qAr.innerHTML = 'Moderada'
@@ -83,7 +83,7 @@ export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
     infoCo.innerHTML = '<i>co: </i>' + co;
     infoNo2.innerHTML = '<i>no2: </i>' + no2;
     infoO3.innerHTML = '<i>o3: </i>' + o3;
-    infoPm2_5.innerHTML = '<i>pm2.5: </i>' + pm2_5;
+    infoPm2_5.innerHTML = '<i>pm2_5: </i>' + pm2_5;
     infoPm10.innerHTML = '<i>pm10: </i>' + pm10;
     infoSo2.innerHTML = '<i>so2: </i>' + so2;
 }
