@@ -29,8 +29,6 @@ export async function getEstado() {
     const dados = await resp.json()
     const selectEstado = document.querySelector('#estado');
 
-    console.log(dados)
-
     dados.map(i => {
         selectEstado.innerHTML += `<option value="${i.sigla}" id='opE'>${i.nome}</option>`
     })
