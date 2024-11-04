@@ -19,7 +19,7 @@ document.querySelector('#estado').addEventListener('change', function () {
 document.querySelector('#cidade').addEventListener('change', async function () {
     const cidade = this.value
     const apiKey = `d5a9f2d2a7a9469d95e140826240211`;
-    const divErro = document.querySelector('#erro')
+    const divErro = document.querySelector('.erro')
 
     try {
         const resp = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cidade}&days=1&aqi=yes&alerts=yes&lang=pt`)
@@ -31,7 +31,7 @@ document.querySelector('#cidade').addEventListener('change', async function () {
         
         divErro.classList.add('hyde');
 
-        const air_quality = await dados.current.air_quality;
+        const air_quality = dados.current.air_quality;
         const { co, no2, o3, pm2_5, pm10, so2 } = air_quality;
         const gbDefraIndex = air_quality["gb-defra-index"];
         const table = document.querySelector('table');
@@ -65,7 +65,7 @@ document.querySelector('#cidade').addEventListener('change', async function () {
         console.error('Erro ao buscar: ', error.message)
         divErro.classList.remove('hyde');
         document.querySelector('.table').classList.add('hyde')
-        msgErro.innerHTML = 'Erro ao buscar', error.statusText
+        msgErro.innerHTML = 'Cidade não cadastrada'
     }
 })
 
