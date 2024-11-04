@@ -15,13 +15,33 @@ body {
     align-items: center;
 }
 
+main .save-title{
+    display: flex;
+    align-items: center;
+    gap: 23%;
+}
+
+button{
+    display: flex;
+    padding: 5px;
+    width: fit-content;
+    align-items: center;
+    font-weight: bold;
+    height: fit-content;
+    outline: none;
+}
+
+button #save{
+    color: black;
+    margin-inline-end: 10px;
+}
+
 .container {
     padding: 1rem;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .3fr 1fr;
-    justify-content: center;
+    grid-template-rows: 1fr;
     align-items: center;
     gap: 1rem;
 }
@@ -38,19 +58,6 @@ body {
     padding-inline: 1rem;
     font-size: 2rem;
     color: red;
-}
-
-button{
-    display: flex;
-    padding: 5px;
-    width: fit-content;
-    align-items: center;
-    font-weight: bold;
-}
-
-button #save{
-    color: black;
-    margin-inline-end: 10px;
 }
 
 main .container select,
@@ -70,11 +77,6 @@ main .container input{
 
 i {
     color: blue;
-}
-
-main .container h1 {
-    text-align: center;
-    grid-column: span 2;
 }
 
 main .container .form {
@@ -102,12 +104,9 @@ main .container .info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
     width: 350px;
     height: 100%;
     padding: 1rem;
-    align-items: center;
     border-radius: 15px;
 }
 
