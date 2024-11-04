@@ -44,7 +44,21 @@ export async function getCidade(estado) {
     dados.map(i => {
         selectCidade.innerHTML += `<option value="${i.nome}">${i.nome}</option>`;
     })
+}
 
+export async function salvarPDF(elemento, filename='arquivo'){
+    const options = {
+        margin: [10,10,10,10],
+        filename: filename+".pdf",
+        image: { type: 'png', quality: 2 },
+        html2canvas: { scale: 1 },  
+        jsPDF: {
+            unit:'mm',
+            format:'a4' ,
+            orientation:'landscape',
+        }
+    }
+    html2pdf().set(options).from(elemento).save()
 }
 
 export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
@@ -73,4 +87,3 @@ export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
     infoPm10.innerHTML = '<i>pm10: </i>' + pm10;
     infoSo2.innerHTML = '<i>so2: </i>' + so2;
 }
-

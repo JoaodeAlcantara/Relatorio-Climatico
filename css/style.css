@@ -56,11 +56,12 @@ button #save{
 main .container select,
 main .container input {
     width: 220px;
-    height: 2rem;
+    height: 2.5rem;
     background: none;
     border: solid 1px;
     color: black;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 main .container input{
@@ -83,11 +84,10 @@ main .container .form {
 
 main .container .form .indice {
     width: fit-content;
-}
-
-main .container .form .indice p:nth-last-of-type(2) {
-    margin-top: 1.2rem;
-    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1rem;
 }
 
 main .container .form .selects {
@@ -147,7 +147,7 @@ main .container .info .dados {
     border-radius: 15px;
     background-color: white;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 table{
@@ -160,7 +160,7 @@ table th{
     padding: .5rem;
 }
 table td{
-    padding: 5px;
+    padding: .5rem;
     background-color: white;
 }
 
