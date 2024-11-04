@@ -46,16 +46,16 @@ export async function getCidade(estado) {
     })
 }
 
-export async function salvarPDF(elemento, filename='arquivo'){
+export async function salvarPDF(elemento, filename = 'arquivo') {
     const options = {
-        margin: [10,10,11,10],
-        filename: filename+".pdf",
+        margin: [10, 10, 11, 10],
+        filename: filename + ".pdf",
         image: { type: 'png', quality: 1 },
-        html2canvas: { scale: 1 },  
+        html2canvas: { scale: 1 },
         jsPDF: {
-            unit:'mm',
-            format:'a4' ,
-            orientation:'landscape',
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'landscape',
         }
     }
     html2pdf().set(options).from(elemento).save()
@@ -73,9 +73,12 @@ export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
     } else if (gbDefraIndex > 6 && gbDefraIndex <= 9) {
         qAr.innerHTML = 'Alta'
         qAr.style.backgroundColor = 'orangered';
-    } else {
+    } else if (gbDefraIndex > 9) {
         qAr.innerHTML = 'Muito Alta'
         qAr.style.backgroundColor = 'red';
+    } else{
+        qAr.innerHTML = '---'
+        qAr.style.backgroundColor = 'gray'
     }
 
     const info = document.querySelectorAll('.dados');

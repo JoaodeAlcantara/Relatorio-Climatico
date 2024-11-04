@@ -65,7 +65,8 @@ document.querySelector('#cidade').addEventListener('change', async function () {
         console.error('Erro ao buscar: ', error.message)
         divErro.classList.remove('hyde');
         document.querySelector('.table').classList.add('hyde')
-        msgErro.innerHTML = 'Cidade não cadastrada'
+        msgErro.innerHTML = 'Cidade não cadastrada';
+        innerHTML('--','--','--','--','--','--','--')
     }
 })
 
