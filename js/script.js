@@ -56,7 +56,7 @@ export async function getCidade(estado) {
 
 export async function salvarPDF(elemento, filename = 'arquivo') {
     const options = {
-        margin: [10, 10, 11, 10],
+        margin: [10, 10, 14, 10],
         filename: filename + ".pdf",
         image: { type: 'png', quality: 1 },
         html2canvas: { scale: 1 },
