@@ -11,7 +11,7 @@ export class CreactTable {
 
     insertInto() {
         const line =
-            `<tr class='lineInfo'>
+        `<tr>
             <td>${this.hr}</td>
             <td>${this.condicao}</td>
             <td>${this.chuva}</td>
@@ -22,6 +22,14 @@ export class CreactTable {
         </tr>`
         return line
     }
+}
+
+export function getDate() {
+    const date = new Date()
+    const dateFormat = (date).toLocaleDateString("pt-BR")
+    document.querySelector('input').value = dateFormat
+    const hrAtual = (date).toLocaleTimeString('pt-br')
+    document.querySelector('#dt-hr').innerHTML = dateFormat + ' às ' + hrAtual.slice(0, 5)
 }
 
 export async function getEstado() {
@@ -76,7 +84,7 @@ export function innerHTML(co, no2, o3, pm2_5, pm10, so2, gbDefraIndex) {
     } else if (gbDefraIndex > 9) {
         qAr.innerHTML = 'Muito Alta'
         qAr.style.backgroundColor = 'red';
-    } else{
+    } else {
         qAr.innerHTML = '---'
         qAr.style.backgroundColor = 'gray'
     }

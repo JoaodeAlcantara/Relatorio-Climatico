@@ -1,14 +1,7 @@
-import { CreactTable, getCidade, getEstado, innerHTML, salvarPDF } from "./script.js"
+import { CreactTable, getCidade, getDate, getEstado, innerHTML, salvarPDF } from "./script.js"
 
-const date = new Date()
-const dateFormat = (date).toLocaleDateString("pt-BR")
-document.querySelector('input').value = dateFormat
-const hrAtual = (date).toLocaleTimeString('pt-br')
-document.querySelector('#dt-hr').innerHTML = dateFormat + ' às ' + hrAtual.slice(0, 5)
-
-window.addEventListener('load', () => {
-    getEstado()
-})
+getDate()
+getEstado()
 
 document.querySelector('#estado').addEventListener('change', function () {
     const estado = this.value
@@ -40,7 +33,7 @@ document.querySelector('#cidade').addEventListener('change', async function () {
 
         table.innerHTML = '';
         table.innerHTML =
-            `<tr>
+        `<tr>
             <th>Horário</th>
             <th>Condição</th>
             <th>Chuva (%)</th>
@@ -52,7 +45,7 @@ document.querySelector('#cidade').addEventListener('change', async function () {
 
         dados.forecast.forecastday[0].hour.map(i => {
             const info = new CreactTable(i.time.slice(11, 16),
-                i.condition.text, i.chance_of_rain, i.temp_c, i.heatindex_c,
+                i.condition.text, i.chance_of_rain, i.temp_c, i.feelslike_c,
                 i.humidity, i.wind_kph);
 
             table.innerHTML += info.insertInto();

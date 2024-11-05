@@ -15,13 +15,13 @@ body {
     align-items: center;
 }
 
-main .save-title{
+main .save-title {
     display: flex;
     align-items: center;
     gap: 23%;
 }
 
-button{
+button {
     display: flex;
     padding: 5px;
     width: fit-content;
@@ -31,7 +31,7 @@ button{
     outline: none;
 }
 
-button #save{
+button #save {
     color: black;
     margin-inline-end: 10px;
 }
@@ -41,19 +41,19 @@ button #save{
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     align-items: center;
     gap: 1rem;
 }
 
-.container .erro{
+.container .erro {
     border: red solid 2px;
     padding: 5px;
     border-radius: 10px;
     width: fit-content;
 }
 
-.container .erro #msgErro, .container .erro #xErro{
+.container .erro #msgErro,
+.container .erro #xErro {
     color: red;
     padding-inline: 1rem;
 }
@@ -69,7 +69,7 @@ main .container input {
     font-size: 1rem;
 }
 
-main .container input{
+main .container input {
     padding-inline: .2rem;
 }
 
@@ -111,6 +111,7 @@ main .container .info {
 main .container .info h4 {
     grid-column: span 3;
     text-align: center;
+    font-weight: 400;
 }
 
 main .container .info #qualidadeAr {
@@ -136,7 +137,7 @@ main .container .info .dados {
     padding: 5px;
 }
 
-.table{
+.table {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
@@ -147,21 +148,21 @@ main .container .info .dados {
     gap: 1rem;
 }
 
-table{
+table {
     border: 1px solid gray;
     background-color: gray;
 }
 
-table th{
+table th {
     background-color: rgb(206, 206, 206);
     padding: .5rem;
 }
-table td{
+
+table td {
     padding: .5rem;
     background-color: white;
 }
 
-.hyde{
+.hyde {
     display: none;
 }
-
