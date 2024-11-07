@@ -154,17 +154,13 @@ table {
 
 table th {
     background-color: rgb(206, 206, 206);
-    border: solid 1px;
+    border: solid 1px gray;
     padding: .5rem;
-}
-
-table td:nth-child(1){
-    font-weight: bold;
 }
 
 table td {
     padding: .5rem;
-    border: solid 1px;
+    border: solid 1px gray;
 }
 
 .hyde {
